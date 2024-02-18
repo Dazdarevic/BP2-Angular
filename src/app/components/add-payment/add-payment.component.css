@@ -1,0 +1,57 @@
+body{
+  margin-top:20px;
+  background-color: #f2f3f8;
+}
+.card {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e5e9f2;
+  border-radius: .2rem;
+}
+.emp-profile{
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 20px;
+  background: #fff;
+  -webkit-box-shadow: 2px 4px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 4px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 4px 13px 0px rgba(0,0,0,0.75);
+}
+/* Stilizacija tabele */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Stilizacija zaglavlja tabele */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Stilizacija ćelija tabele */
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Stilizacija redova */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

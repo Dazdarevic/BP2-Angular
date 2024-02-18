@@ -1,0 +1,47 @@
+.btn-outline-dark:hover {
+  cursor: pointer;
+}
+.star-rating {
+  display: inline-block;
+  font-size: 30px;
+}
+
+.star {
+  color: white; /* Default color */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star.filled,
+.star:hover {
+  color: #f8d71e; /* Color on hover and when rated */
+}
+
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 10px; /* Ovo možete prilagoditi prema vašim preferencijama */
+  cursor: pointer;
+}
+
+.pagination-btn:hover {
+  background-color: #0056b3;
+}
+
+.pagination-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  margin-right: 10px;
+}

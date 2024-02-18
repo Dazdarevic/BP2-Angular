@@ -1,0 +1,57 @@
+<div class="container h-100">
+  <div class="row h-100">
+  <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+    <div class="d-table-cell align-middle">
+
+      <div class="text-center mt-4">
+        <h1 class="h2">Membership Payment</h1>
+        <p class="lead">Add payment for member.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="m-sm-4">
+            <form (ngSubmit)="makePayment()" #paymentForm="ngForm">
+              <div class="form-group">
+                <label>Name</label>
+                <input class="form-control form-control-lg" type="text" name="memberName"
+                       [(ngModel)]="paymentData.memberName" placeholder="Enter member's name">
+              </div>
+              <div class="form-group">
+                <label>Date</label>
+                <input class="form-control form-control-lg" type="date" name="date"
+                       [(ngModel)]="paymentData.date" min="2024-02-01" max="2024-12-31" placeholder="Enter date">
+              </div>
+              <p *ngIf="errMessage" class="alert alert-danger show mt-3">
+                {{ errMessage }}
+              </p>
+              <div class="text-center mt-3">
+                <button type="submit" class="btn btn-lg btn-primary">Add</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="container emp-profile">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Payment ID</th>
+        <th>Member Name</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments">
+        <td>{{ payment.paymentId }}</td>
+        <td>{{ payment.memberName }}</td>
+        <td>{{ payment.date | date:'yyyy MMMM dd' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,20 @@
+<div class="container emp-profile">
+        <h3>Hello! This is message from your trainer. <br> Good luck, and never give up! Small progress is stil a progress.</h3>
+        <p>{{ comment }}</p>
+</div>
+
+<div class="container emp-profile">
+  <div>
+    <h3 style="color: blue">Membership - Payments</h3>
+  </div>
+  <div *ngIf="payments">
+    <div *ngFor="let payment of payments">
+      <p>Date of payment: {{ payment.date | date:'yyyy/MM/dd' }}</p>
+      <p>Month: {{ payment.date |  date:'MMMM'  }}</p>
+      <!-- Dodajte ostale informacije o plaćanju koje želite da prikažete -->
+    </div>
+  </div>
+</div>
+
+
+
